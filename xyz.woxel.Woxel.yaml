@@ -24,4 +24,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/woxels/woxel.git
-        commit: 659fcca3654d52cb0f44a802700e99e9fad5a88a
+        commit: 990132b3a410e883b0b31b51617a13f4b871b3d2
