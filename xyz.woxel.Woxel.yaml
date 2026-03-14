@@ -1,6 +1,6 @@
 app-id: xyz.woxel.Woxel
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: woxel
 rename-icon: woxel
@@ -18,10 +18,11 @@ modules:
     build-commands:
       - cc main.c -lSDL2 -lGLESv2 -lEGL -Ofast -lm -lz -o woxel
       - install -Dm 0755 woxel -t ${FLATPAK_DEST}/bin
-      - install -Dm 0644 flatpak/woxel.desktop ${FLATPAK_DEST}/share/applications/woxel.desktop
-      - install -Dm 0644 flatpak/woxel.appdata.xml ${FLATPAK_DEST}/share/metainfo/woxel.appdata.xml
-      - install -Dm 0644 flatpak/woxel.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/woxel.png
+      - install -Dm 0644 flatpak/woxel.desktop -t ${FLATPAK_DEST}/share/applications/
+      - install -Dm 0644 flatpak/woxel.appdata.xml -t ${FLATPAK_DEST}/share/metainfo/
+      - install -Dm 0644 flatpak/woxel.png -t ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/
     sources:
       - type: git
         url: https://github.com/woxels/woxel.git
-        commit: 3ee44a4988c0e3a69c6596d4beb6f41e69e16b5b
+        tag: 1.5
+        commit: 296c895470a45ba25d6be639b0314d30eaebc3c3
